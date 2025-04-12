@@ -1,0 +1,15 @@
+{
+  "name": "Young Rich",
+  "short_name": "YoungRich",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#3b82f6",
+  "theme_color": "#3b82f6",
+  "icons": [
+    {
+      "src": "https://em-content.zobj.net/thumbs/240/apple/354/money-bag_1f4b0.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

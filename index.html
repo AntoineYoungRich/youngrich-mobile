@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Young Rich 💰</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Young Rich 💰</h1>
+    <p>Faites fructifier vos POL avec le pouvoir du staking automatique</p>
+    <p>Votre solde total en MATIC : <span id="maticBalance">Chargement...</span></p>
+    <button id="connecter">🔐 Connecter MetaMask</button>
+  </header>
+
+  <main>
+    <section>
+      <h2>💎 Solde de staking</h2>
+      <p id="solde">Chargement...</p>
+
+      <h2>$ Capital estimé (USD)</h2>
+      <p id="capitalUSD">Chargement...</p>
+
+      <h2>⚡ Gain automatique</h2>
+      <p id="gain">Chargement...</p>
+
+      <h2>📈 Capital total estimé</h2>
+      <p id="capitalTotalPOL">-- POL</p>
+      <p id="capitalTotalUSD">-- USD</p>
+
+      <button id="refresh">🔄 Actualiser</button>
+    </section>
+
+    <section>
+      <h2>💰 Déposer ou retirer du POL</h2>
+      <input type="number" id="montant" placeholder="Montant en POL">
+      <button id="depotBtn">📥 Déposer</button>
+      <button id="retraitBtn">📤 Retirer</button>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js')
+        .then(() => console.log('✅ Service worker registered'))
+        .catch((err) => console.error('❌ Service worker error:', err));
+    }
+  </script>
+</body>
+</html>

@@ -36,6 +36,7 @@ let depositTime = Date.now();
 
 const POL_TO_USD = 0.18;
 const HOURLY_RATE = 0.05;
+const RETRAIT_POURCENTAGE = 0.01;
 
 async function connecterMetaMask() {
   if (!window.ethereum) {
@@ -77,6 +78,9 @@ async function actualiserInfos() {
   const capitalUSD = (basePOL * POL_TO_USD).toFixed(2);
   document.getElementById("solde").innerText = `${basePOL.toFixed(4)} POL`;
   document.getElementById("capitalUSD").innerText = `~${capitalUSD} USD`;
+
+  const maxRetirable = basePOL * RETRAIT_POURCENTAGE;
+  document.getElementById("maxRetirable").innerText = `${maxRetirable.toFixed(4)} POL`;
 }
 
 function calculGainLive() {
